@@ -230,7 +230,31 @@ Proceso carreraDeAutos
 			Escribir "OOOO3 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | META";
 			Escribir "OOOO4 _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | META";	
 		FinSi
+		
 		Esperar Tecla;
+		
+		Si (auxj5=6 || auxj4=6 || auxj3=6 || auxj2=6 || auxj1=6) entonces 
+			
+			si auxj5=6 Entonces
+				Escribir " El ganador es el Vehiculo N° 5";
+			FinSi
+			
+			si auxj4=6 Entonces
+				Escribir " El ganador es el Vehiculo N° 5";
+			FinSi
+			
+			si auxj3=6 Entonces
+				Escribir " El ganador es el Vehiculo N° 5";
+			FinSi
+			
+			si auxj2=6 Entonces
+				Escribir " El ganador es el Vehiculo N° 5";
+			FinSi
+			
+			si auxj1=6 Entonces
+				Escribir " El ganador es el Vehiculo N° 5";
+			FinSi
+		FinSi
 	FinPara
 	
 //	Escribir "OOOO _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ | META";
