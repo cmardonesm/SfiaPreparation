@@ -1,0 +1,34 @@
+p:hover {
+	font-weight: bold;
+	color: red;
+	text-align: center;
+}
+
+p > span {
+	color:yellow;
+}
+
+h1,h6 {
+	color: blue;
+}
+
+.parrafoImportante {
+	color:green;
+}
+
+ul > li {
+	font-size: 40px;
+
+}
+
+p:hover {
+	color:black;
+}
+
+#arroz {
+	color:purple;
+}
+
+.bold {
+	font-weight: bold;
+}
