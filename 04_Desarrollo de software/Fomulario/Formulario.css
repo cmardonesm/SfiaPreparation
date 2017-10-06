@@ -1,33 +1,54 @@
-p{
-	font-weight: bold;
-	color: red;
+h1{
+	color:orange;
+	font-size:60px;
 }
 
-p > span {
-	color:yellow;
-}
+h2{
+	color:black;
+	font-size:40px;
 
-h1,h6 {
-	color: blue;
 }
-
 .parrafoImportante {
 	color:green;
 }
 
 ul > li {
 	font-size: 40px;
-
 }
 
 p:hover {
 	color:black;
 }
 
-#arroz {
-	color:purple;
-}
-
 .bold {
 	font-weight: bold;
 }
+ 
+form {
+width: 600px;
+height: 500px;
+float: center;
+text-align: center;
+}
+
+label {
+color:black;
+	font-size:30px;
+	align:"center";  
+}
+
+.formatoForm{
+	opacity: 0.5;
+}
+
+.contenedor {
+text-decoration: none;
+opacity: 0.8;
+background-color:#58FAF4;
+background-image: url('pastas.jpg');
+background-origin: padding-box;
+margin: 0 auto;
+width: 922px;
+
+}
+ 

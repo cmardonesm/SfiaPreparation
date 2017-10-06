@@ -4,21 +4,37 @@
 <head>
 	<title>Ristorante di CORFO</title>
 	<link rel="stylesheet" href="Formulario.css">
-
 </head>
 
 <body>
-	<h1>Formulario web Ristorante Di CORFO </h1>	
-	<form action="http://www.google.cl" method="post">
+	<h1 class="titulo1">Ristorante di corfo </h1>
+	
+
+<div class="contenedor" >
+	<form action="http://www.google.cl" method="post";>
+
+	<h2>Formulario reserva web</h2>	
 	    <div>
 	        <label for="Nombre">Name:</label>
 	        <input type="text" id="name" />
 	    </div>
-	    <div>
+
+		<div>
 	        <label for="correo">correo:</label>
 	        <input type="text" id="name" />
 	    </div>
-	<input type="submit" value="Enviar Datos" />	
+
+	    <div>
+	        <label for="male">Male</label>
+  			<input type="radio" name="gender" id="male" value="male"><br>
+  			<label for="female">Female</label>
+  			<input type="radio" name="gender" id="female" value="female"><br>
+  			<label for="other">Other</label>
+  			<input type="radio" name="gender" id="other" value="other"><br><br>
+	    </div>
+
+	<input type="submit" value="Enviar Datos" id="enviar"/>	
 	</form>
+</div>
 </body>
 </html>
