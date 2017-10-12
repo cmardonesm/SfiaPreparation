@@ -6,7 +6,6 @@ h1{
 h2{
 	color:black;
 	font-size:40px;
-
 }
 .parrafoImportante {
 	color:green;
@@ -25,17 +24,18 @@ p:hover {
 }
  
 form {
-width: 600px;
+width: 900px;
 height: 500px;
 float: center;
-text-align: center;
+text-align: left;
 }
 
 label {
 color:black;
 	font-size:30px;
-	align:"center";  
+	align:"center";
 }
+div{ margin: 0,2cm 0cm 0cm 0,5cm;}
 
 .formatoForm{
 	opacity: 0.5;
@@ -43,12 +43,46 @@ color:black;
 
 .contenedor {
 text-decoration: none;
-opacity: 0.8;
+opacity: 1;
 background-color:#58FAF4;
-background-image: url('pastas.jpg');
 background-origin: padding-box;
-margin: 0 auto;
+margin: 0cm 4cm 3cm 4cm;
 width: 922px;
+margin-bottom: 7cm;
 
 }
- 
+
+.formatoAlertas{
+	opacity: 0.8;
+	background-color:#58FAF4;
+	background-image: url('pastas.jpg');
+}
+
+.botones {
+	margin: 0.5cm 0cm 0cm 0cm;
+    background-color: #5CAAF4; 
+    color: black;
+    border-style:dotted;
+    border-radius: 20%;
+   	padding: 5px 7px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 300px;
+}
+
+.botonesSecundarios {
+	 background-color: #F7AD18; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}

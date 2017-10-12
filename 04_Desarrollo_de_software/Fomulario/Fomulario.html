@@ -28,16 +28,13 @@
 	}
 
 	function segundaFuncionSuma(){
-		alert ("Suma");
-		var valor1 = obtenerValor1();
-		var valor2 = obtenerValor2();
-		var suma = sumar(valor1,valor2);
-		asignarResultado(suma);
+		alert("Suma");
+		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)-parseInt(document.getElementById("valor2").value);
 	}
 
 	function segundaFuncionResta(){
-		alert ("Resta");
 		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)-parseInt(document.getElementById("valor2").value);
+		alert ("Resta"+" El resultado es: "+document.getElementById("resul").value);
 	}
 
 	function segundaFuncionMultiplicacion(){
@@ -51,17 +48,24 @@
 
 	</script>
 
-
-
-	<h1>Formulario web Ristorante Di CORFO </h1>	
+	<h1>Formulario web Ristorante Di CORFO </h1>
+		
 		<form action="" method="post" onsubmit="PrimeraFuncion()">
-	
+			<h2>Ejercicio N°1: concatenar valores del formulario </h1>
 			<div>
 				<label for="name">Nombre:</label>
 				<input type="text" id="name" name="name" />
 			</div>
 			<button type="submit">para ejecutar ejercicio 1 presione este boton</button>
 
+			<div>
+				<h2>Ejercicio N° 2: sumar valores ingresador por el usuario en el formulario</h1>
+			</div>
+
+			<div>
+		        <label for="msg">Intrucciones:</label>
+		        <textarea id="msg">ingrese los numero y precione el boton</textarea>
+		    </div>
 
 			<div>
 				<label for="primerValor">valor1:</label>
@@ -78,26 +82,12 @@
 		        <input type="text" id="resul" />
 		    </div>
 
-		    <div>
-		        <label for="msg">Message:</label>
-		        <textarea id="msg">ingrese los numero y aprete el boton</textarea>
-		    </div>
-
 			<div class="button">
 				<input value="+" type="button" onclick="segundaFuncionSuma()">
-			    </div>	
-
-			 <div class="button">
 				<input value="-" type="button" onclick="segundaFuncionResta()">
-			    </div>	
-
-			 <div class="button">
 			  	<input value="*" type="button" onclick="segundaFuncionMultiplicacion()">
-			    </div>	
-
-			<div class="button">
 				<input value="/" type="button" onclick="segundaFuncionDivision()">
-			    </div>
-	</form>
+			 </div>
+		</form>
 </body>
 </html>

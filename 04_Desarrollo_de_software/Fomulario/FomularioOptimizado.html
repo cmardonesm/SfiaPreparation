@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ristorante di CORFO</title>
+<link rel="stylesheet" href="Formulario.css">
+
+</head>
+<body>
+
+			<script type="text/javascript">
+							function PrimeraFuncion() {
+								alert("Hola " + document.getElementById("name").value);
+							}
+
+							function obtenerValor1(){
+								return parseInt(document.getElementById("valor1").value);
+							}
+							function obtenerValor2(){
+								return parseInt(document.getElementById("valor2").value);
+							}
+
+							function asignarResultado(resultado){
+								document.getElementById("resul").value=resultado;
+							}
+
+							function sumar(valorA,valorB){
+								return valorA+valorB;
+							}
+							function restar(valorA,valorB){
+								return valorA-valorB;
+							}
+							function multiplicar(valorA,valorB){
+								return valorA*valorB;
+							}
+							function dividir(valorA,valorB){
+								return valorA/valorB;
+							}
+
+				function segundaFuncionSuma(){
+					alert ("Usted esta haciendo una Suma");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					var valorObtenido = sumar(valor1,valor2);
+					asignarResultado(valorObtenido);
+				}
+				function segundaFuncionResta(){
+					alert ("Usted esta haciendo una Resta");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					var valorObtenido = restar(valor1,valor2);
+					asignarResultado(valorObtenido);
+				}
+				function segundaFuncionMultiplicacion(){
+					alert ("Usted esta haciendo una Multiplicacion");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					var valorObtenido = multiplicar(valor1,valor2);
+					asignarResultado(valorObtenido);
+				}
+				function segundaFuncionDivision(){
+					alert ("Usted esta haciendo una division");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					if (valor2==0) {
+						alert ("El dividendo no puede ser cero ingrese otro valor");
+					} else{
+						var valorObtenido = dividir(valor1,valor2);
+					asignarResultado(valorObtenido);
+
+					}
+				}
+
+			</script>
+
+<h1>EJERCICIOS FORMULARIOS WEB  </h1>
+		
+		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
+<!--***************************Ejercicio N° 2**********************************************************-->
+			<h2>Ejercicio N°1: concatenar valores del formulario </h1>
+			<div>
+				<label for="name">Nombre:</label>
+				<input type="text" id="name" name="name" />
+			</div>
+			<button type="submit">para ejecutar ejercicio 1 presione este boton</button>
+
+<!--***************************Ejercicio N° 2**********************************************************-->
+
+					<!-- Titulo y ayuda para el usuario -->
+					<div>
+						<h2>Ejercicio N° 2: sumar valores ingresador por el usuario en el formulario</h2>
+					</div>
+
+					<div>
+				        <label for="msg">Intrucciones:</label>
+				        <textarea id="msg">Ingrese dos números y presione el boton con la operación correspondientes</textarea>
+				    </div>
+
+					<div>
+						<label for="primerValor">Valor1:</label>
+						<input type="text" id="valor1" name="primerValor" />
+					</div>
+					<!--  obtener los valores desde el formulario -->
+					<div>
+						<label for="segundoValor">Valor2:</label>
+						<input type="text" id="valor2" name="segundoValor" />
+					</div>
+					<!-- creación del objeto en el que se mostrará el resultado -->
+					<div>
+				        <label for="resul">Resultado:</label>
+				        <input type="text" id="resul" />
+				    </div>
+							<!-- creación de los botones para las operaciones -->
+							<div class="botones">
+								<input class="botonesSecundarios" value="+" type="button" onclick="segundaFuncionSuma()">
+								<input class="botonesSecundarios"  value="-" type="button" onclick="segundaFuncionResta()">
+							  	<input class="botonesSecundarios" value="*" type="button" onclick="segundaFuncionMultiplicacion()">
+								<input class="botonesSecundarios" value="/" type="button" onclick="segundaFuncionDivision()">
+							</div>
+		</form>
+</body>
+</html>
