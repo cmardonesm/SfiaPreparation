@@ -12,9 +12,27 @@
 		alert("Hola " + document.getElementById("name").value);
 	}
 
+	function obtenerValor1(){
+		return parseInt(document.getElementById("valor1").value);
+	}
+	function obtenerValor2(){
+		return parseInt(document.getElementById("valor2").value);
+	}
+
+	function asignarResultado(resultado){
+		document.getElementById("resul").value=resultado;
+	}
+
+	function sumar(valorA,valorB){
+		return valorA+valorB;
+	}
+
 	function segundaFuncionSuma(){
 		alert ("Suma");
-		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)+parseInt(document.getElementById("valor2").value);
+		var valor1 = obtenerValor1();
+		var valor2 = obtenerValor2();
+		var suma = sumar(valor1,valor2);
+		asignarResultado(suma);
 	}
 
 	function segundaFuncionResta(){
