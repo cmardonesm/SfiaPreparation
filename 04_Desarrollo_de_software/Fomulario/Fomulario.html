@@ -14,66 +14,72 @@
 
 	function segundaFuncionSuma(){
 		alert ("Suma");
-		document.getElementById("res").value=parseInt()
+		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)+parseInt(document.getElementById("valor2").value);
 	}
 
 	function segundaFuncionResta(){
 		alert ("Resta");
-		document.getElementById("").value=parseInt()
+		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)-parseInt(document.getElementById("valor2").value);
 	}
 
 	function segundaFuncionMultiplicacion(){
 		alert ("Multiplicacion");
-		document.getElementById("res").value=parseInt()
+		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)*parseInt(document.getElementById("valor2").value);
 	}
 	function segundaFuncionDivision(){
 		alert ("Divison");
-		document.getElementById("res").value=parseInt()
+		document.getElementById("resul").value=parseInt(document.getElementById("valor1").value)/parseInt(document.getElementById("valor2").value);
 	}
 
 	</script>
 
+
+
 	<h1>Formulario web Ristorante Di CORFO </h1>	
-	<form action="" method="post" onsubmit="square()">
-	<div>
-		<label for="primerValor">valor1:</label>
-		<input type="text" id="valor1" name="Valor1" />
-	</div>
+		<form action="" method="post" onsubmit="PrimeraFuncion()">
+	
+			<div>
+				<label for="name">Nombre:</label>
+				<input type="text" id="name" name="name" />
+			</div>
+			<button type="submit">para ejecutar ejercicio 1 presione este boton</button>
 
-	<div>
-		<label for="segundoValor">valor2:</label>
-		<input type="text" id="valor2" name="Valor2" />
-	</div>
 
-	<div>
-        <label for="resul">Resultado..</label>
-        <input type="text" id="resul" />
-    </div>
-    <div>
-        <label for="msg">Message:</label>
-        <textarea id="msg"></textarea>
-    </div>
+			<div>
+				<label for="primerValor">valor1:</label>
+				<input type="text" id="valor1" name="primerValor" />
+			</div>
 
-<div class="button">
-        <button type="submit">Send your message</button>
-	<input value="+" type="button" onclick="segundaFuncionSuma()">
-    </div>	
+			<div>
+				<label for="segundoValor">valor2:</label>
+				<input type="text" id="valor2" name="segundoValor" />
+			</div>
 
- <div class="button">
-        <button type="submit">Send your message</button>
-	<input value="-" type="button" onclick="segundaFuncionResta()">
-    </div>	
+			<div>
+		        <label for="resul">Resultado..</label>
+		        <input type="text" id="resul" />
+		    </div>
 
- <div class="button">
-        <button type="submit">Send your message</button>
-	<input value="*" type="button" onclick="segundaFuncionMultiplicacion()">
-    </div>	
+		    <div>
+		        <label for="msg">Message:</label>
+		        <textarea id="msg">ingrese los numero y aprete el boton</textarea>
+		    </div>
 
-<div class="button">
-        <button type="submit">Send your message</button>
-	<input value="/" type="button" onclick="segundaFuncionDivision()">
-    </div>	
+			<div class="button">
+				<input value="+" type="button" onclick="segundaFuncionSuma()">
+			    </div>	
 
-</form>
+			 <div class="button">
+				<input value="-" type="button" onclick="segundaFuncionResta()">
+			    </div>	
+
+			 <div class="button">
+			  	<input value="*" type="button" onclick="segundaFuncionMultiplicacion()">
+			    </div>	
+
+			<div class="button">
+				<input value="/" type="button" onclick="segundaFuncionDivision()">
+			    </div>
+	</form>
 </body>
 </html>

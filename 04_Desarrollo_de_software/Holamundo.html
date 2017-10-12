@@ -7,16 +7,14 @@ h1 {color:green;}
 <script>
 
 function hola(){
-alert("Hola " + document.getElementById("name").value);
+alert("Hola " + document.getElementById("name"));
 }
 
-function suma()
+function suma()         
 {
 alert("suma");
 document.getElementById("res").value = parseInt(document.getElementById("name").value) + parseInt(document.getElementById("mail").value);
-
 }
-
 </script>
 
 
@@ -38,10 +36,10 @@ document.getElementById("res").value = parseInt(document.getElementById("name").
         <label for="msg">Message:</label>
         <textarea id="msg"></textarea>
     </div>
-	<div class="button">
+    <div class="button">
         <button type="submit">Send your message</button>
 	<input value="+" type="button" onclick="suma()">
-    </div>
+    
 </form>
 </body>
 </html>
