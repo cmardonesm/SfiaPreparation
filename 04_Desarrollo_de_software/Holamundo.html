@@ -1,0 +1,47 @@
+<html>
+<body>
+<title>Mi primera Web</title>
+<style type="text/css">
+h1 {color:green;}
+</style>
+<script>
+
+function hola(){
+alert("Hola " + document.getElementById("name").value);
+}
+
+function suma()
+{
+alert("suma");
+document.getElementById("res").value = parseInt(document.getElementById("name").value) + parseInt(document.getElementById("mail").value);
+
+}
+
+</script>
+
+
+<h1 >Hola mundo</h1>
+<form action="" method="post" onsubmit="hola()">
+    <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="Nombre" />
+    </div>
+    <div>
+        <label for="mail">E-mail:</label>
+        <input type="text" id="mail" />
+    </div>
+    <div>
+        <label for="res">Resultado</label>
+        <input type="text" id="res" />
+    </div>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg"></textarea>
+    </div>
+	<div class="button">
+        <button type="submit">Send your message</button>
+	<input value="+" type="button" onclick="suma()">
+    </div>
+</form>
+</body>
+</html>

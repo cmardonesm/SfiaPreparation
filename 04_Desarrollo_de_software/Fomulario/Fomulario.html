@@ -7,19 +7,73 @@
 </head>
 
 <body>
+	<script type="text/javascript">
+	function PrimeraFuncion() {
+		alert("Hola " + document.getElementById("name").value);
+	}
+
+	function segundaFuncionSuma(){
+		alert ("Suma");
+		document.getElementById("res").value=parseInt()
+	}
+
+	function segundaFuncionResta(){
+		alert ("Resta");
+		document.getElementById("").value=parseInt()
+	}
+
+	function segundaFuncionMultiplicacion(){
+		alert ("Multiplicacion");
+		document.getElementById("res").value=parseInt()
+	}
+	function segundaFuncionDivision(){
+		alert ("Divison");
+		document.getElementById("res").value=parseInt()
+	}
+
+	</script>
+
 	<h1>Formulario web Ristorante Di CORFO </h1>	
-	<form action="http://www.google.cl" method="get">
-	    <div>
-	        <label for="Nombre">Name:</label><input type="text" />
-	    </div><br>
-	    <div>
-	        <label for="correo">correo:</label><input type="text" />
-	    </div><br>
-		<input type="password" value="ingresar contraseña" />
-		<br>
-	     <br>
-	     <br>
-		<input type="submit" value="Enviar Datos" />
-	</form>
+	<form action="" method="post" onsubmit="square()">
+	<div>
+		<label for="primerValor">valor1:</label>
+		<input type="text" id="valor1" name="Valor1" />
+	</div>
+
+	<div>
+		<label for="segundoValor">valor2:</label>
+		<input type="text" id="valor2" name="Valor2" />
+	</div>
+
+	<div>
+        <label for="resul">Resultado..</label>
+        <input type="text" id="resul" />
+    </div>
+    <div>
+        <label for="msg">Message:</label>
+        <textarea id="msg"></textarea>
+    </div>
+
+<div class="button">
+        <button type="submit">Send your message</button>
+	<input value="+" type="button" onclick="segundaFuncionSuma()">
+    </div>	
+
+ <div class="button">
+        <button type="submit">Send your message</button>
+	<input value="-" type="button" onclick="segundaFuncionResta()">
+    </div>	
+
+ <div class="button">
+        <button type="submit">Send your message</button>
+	<input value="*" type="button" onclick="segundaFuncionMultiplicacion()">
+    </div>	
+
+<div class="button">
+        <button type="submit">Send your message</button>
+	<input value="/" type="button" onclick="segundaFuncionDivision()">
+    </div>	
+
+</form>
 </body>
 </html>
