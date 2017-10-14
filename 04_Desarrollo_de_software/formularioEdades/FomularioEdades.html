@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ristorante di CORFO</title>
+<link rel="stylesheet" href="Formulario.css">
+
+</head>
+<body>
+
+			<script type="text/javascript">
+
+							function PrimeraFuncion() {
+								alert("Hola " + document.getElementById("name").value);
+							}
+
+							function obtenerValor1(){
+								return parseInt(document.getElementById("valor1").value);
+							}
+							function obtenerValor2(){
+								return parseInt(document.getElementById("valor2").value);
+								}
+							function obtenerDia(){
+								return parseInt(document.getElementById("dias").value);
+							}
+							function obtenerMes(){
+								return parseInt(document.getElementById("mes").value);
+							}
+							function obtenerAño(){
+								return parseInt(document.getElementById("dias").value);
+							}
+
+							function obtenerCaracteres(){
+								return document.getElementById("dias").value;
+							}
+
+							function asignarResultado(resultado){
+								document.getElementById("resul").value=resultado;
+							}
+							function concatenarResultado(valorAConcatenar){
+								document.getElementById("resul").value+=valorAConcatenar;
+							}
+							function sumar(valorA,valorB){
+								return valorA+valorB;
+							}
+							function restar(valorA,valorB){
+								return valorA-valorB;
+							}
+							function multiplicar(valorA,valorB){
+								return valorA*valorB;
+							}
+							function dividir(valorA,valorB){
+								return valorA/valorB;
+							}
+
+
+				function segundaFuncionSuma(){
+					alert ("Usted esta haciendo una Suma");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					var valorObtenido = sumar(valor1,valor2);
+					asignarResultado(valorObtenido);
+				}
+				function segundaFuncionResta(){
+					alert ("Usted esta haciendo una Resta");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					var valorObtenido = restar(valor1,valor2);
+					asignarResultado(valorObtenido);
+				}
+				function segundaFuncionMultiplicacion(){
+					alert ("Usted esta haciendo una Multiplicacion");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					var valorObtenido = multiplicar(valor1,valor2);
+					asignarResultado(valorObtenido);
+				}
+				function segundaFuncionDivision(){
+					alert ("Usted esta haciendo una division");
+					var valor1 = obtenerValor1();
+					var valor2 = obtenerValor2();
+					if (valor2==0) {
+						alert ("El dividendo no puede ser cero ingrese otro valor");
+					} else{
+						var valorObtenido = dividir(valor1,valor2);
+					asignarResultado(valorObtenido);
+
+					}
+				}
+				function esPar(){
+					alert ("Veremos si el varlor1 es par ingresado es par");
+					var var1=obtenerValor1() % 2 ;
+					if (var1==0) {
+						alert ("El numero es par");
+					} else{
+						alert ("El numero es impar");
+					}
+				}
+				function esPrimo(){
+					alert ("Veremos los numero primos inferiores o iguales a valor1");
+					asignarResultado("");
+					for (var i = obtenerValor1() ; i>= 1; i--) {
+						var contador=0;
+						for (var k = 1; k <=i; k++) {
+							var verPrimo=i%k ;
+							if (verPrimo==0) {
+								contador=contador+1;
+							}
+						}
+						if(contador==2){
+							concatenarResultado(i+"-");
+						}
+					}
+				}
+
+				function fibonacci(){
+					document.getElementById("resul").value="";
+					alert ("Veremos el resultado de la seri de Fbonacci");
+					var valor1=obtenerValor1();
+					var numero=1;
+					var numeroAnterior=0;
+					var aux;
+					for (var k = 1; k <=valor1-1; k++) {
+						concatenarResultado(numeroAnterior+"-");
+						if (numero>valor1)
+							brake ;
+						aux = numero;
+						numero+=numeroAnterior;
+						numeroAnterior=aux;
+						//document.write(numeroAnterior+"<br>");
+					}
+				}
+				
+				function calcularEdad(){
+					var año1=obtenerAño();
+					var mes1=obtenerMes();
+					var dia1=obtenerDia();
+					var fechaActual = new Date();
+					var año2=fechaActual.getFullYear();
+					var mes2=fechaActual.getMonth()+1;
+					var dia2=fechaActual.getUTCDate();
+					var año=0;
+					var mes=0;
+					var dia=0;
+						año=año2-año1;
+						mes=mes2-mes1;
+						dia=dia2-dia1;
+
+						if (mes2<mes1){ 
+							año=año-1;
+							mes=mes2+12-mes1;
+							}
+						if (dia2<dia1){
+							mes=mes-1;
+							dia=dia2+30-dia1
+							}
+					document.getElementById("años").value=año;
+					document.getElementById("meses").value=mes;
+					document.getElementById("dias").value=dia;	
+				}
+
+				function ivertirCaracteres(){
+					var cadena=obtenerCaracteres();
+					var largoCadena=cadena.length;
+					var cardenaInvertida="";
+
+					while (largoCadena>=0){
+						cardenaInvertida+=cadena.charAt(largoCadena);
+						largoCadena=largoCadena-1;
+					}
+					document.getElementById("años").value=cardenaInvertida;
+				}
+
+			</script>
+
+<h1>EJERCICIOS FORMULARIOS WEB  </h1>
+		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
+<!--***************************Ejercicio N° 2**********************************************************-->
+			<h2>Ejercicio N°1: concatenar valores del formulario </h1>
+			<div>
+				<label for="name">Nombre:</label>
+				<input type="text" id="name" name="name" />
+			</div>
+			<br>
+			<button type="submit">para ejecutar ejercicio 1 presione este boton</button>
+
+<!--***************************Ejercicio N° 2**********************************************************-->
+
+					<!-- Titulo y ayuda para el usuario -->
+					<div>
+						<h2>Ejercicio N° 2: Operaciones con los valores ingresador por el usuario en el formulario</h2>
+					</div>
+
+					<div>
+				        <label for="msg">Intrucciones:</label>
+				        <textarea id="msg">Ingrese dos números y presione el boton con la operación correspondientes</textarea>
+				    </div>
+
+					<div>
+						<label for="primerValor">Valor1:</label>
+						<input type="text" id="valor1" name="primerValor" />
+					</div>
+					<!--  obtener los valores desde el formulario -->
+					<div>
+						<label for="segundoValor">Valor2:</label>
+						<input type="text" id="valor2" name="segundoValor" />
+					</div>
+					<!-- creación del objeto en el que se mostrará el resultado -->
+					<div>
+				        <label for="resul">Resultado:</label>
+				        <input type="text" id="resul" />
+				    </div>
+							<!-- creación de los botones para las operaciones -->
+							<div class="botones">
+								<input class="botonesSecundarios" value="+" type="button" onclick="segundaFuncionSuma()">
+								<input class="botonesSecundarios"  value="-" type="button" onclick="segundaFuncionResta()">
+							  	<input class="botonesSecundarios" value="*" type="button" onclick="segundaFuncionMultiplicacion()">
+								<input class="botonesSecundarios" value="/" type="button" onclick="segundaFuncionDivision()">
+								<input class="botonesSecundarios" value="ver si valor 1 es par" type="button" onclick="esPar()">
+								<input class="botonesSecundarios" value="ver primos valor1" type="button" onclick="esPrimo()">
+								<input class="botonesSecundarios" value="ver fibonacci" type="button" onclick="fibonacci()">
+							</div>
+		</form>
+	<form class="contenedor" action="" method="post" onsubmit="calcularEdad()">
+<!--***************************Ejercicio N° 2**********************************************************-->
+			<h2>Ejercicio N°4: Encontrar la edad de una persona </h1>
+			<div>
+				<label for="msg">Intrucciones:</label>
+				<textarea id="msg">Ingrese dos números y presione el boton con la operación correspondientes</textarea>
+			</div>
+			<div>
+				<label for="name">Dia de nacimiento:</label>
+				<input type="text" id="dias"  />
+			</div>
+			<div>
+				<label for="name">Mes de nacimiento:</label>
+				<input type="text" id="mes"  />
+			</div>
+			<div>
+				<label for="name">Nacimiento de nacimiento:</label>
+				<input type="text" id="año"  />
+			</div>
+			<br> 
+			<button class="botones" type="submit">Calcular edad</button>
+			<br> 
+			<div class="botones">
+				<label for="resul">Su edad es de:</label>
+				<input class="botonesSecundarios"  type="button" id="años">
+				<label for="resul">años</label>
+				<input class="botonesSecundarios"  type="button" id="meses">
+				<label for="resul">meses</label>
+				<input class="botonesSecundarios"  type="button" id="dias">
+				<label  for="resul">dias</label>
+				<input class="botonesSecundarios" value="invertiCadena" type="button" onclick="ivertirCaracteres()">
+			 </div>
+		</form>
+		
+</body>
+</html>
