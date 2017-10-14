@@ -1,0 +1,93 @@
+h1{
+	color:orange;
+	font-size:40px;
+}
+
+h2{
+	color:black;
+	font-size:30px;
+}
+.parrafoImportante {
+	color:green;
+}
+
+ul > li {
+	font-size: 40px;
+}
+
+p:hover {
+	color:black;
+}
+
+.bold {
+	font-weight: bold;
+}
+ 
+form {
+width: 900px;
+height: 500px;
+float: center;
+text-align: left;
+padding:20px;
+}
+
+label {
+color:black;
+	font-size:20px;
+	align:"center";
+}
+div{ margin: 0,2cm 0cm 0cm 0,5cm;}
+
+.formatoForm{
+	opacity: 0.5;
+}
+
+.contenedor {
+text-decoration: none;
+opacity: 1;
+background-color:#58FAF4;
+background-origin: padding-box;
+margin: 0cm 4cm 3cm 4cm;
+width: 922px;
+height:600px;
+margin-bottom: 7cm;
+
+}
+
+.formatoAlertas{
+	opacity: 0.8;
+	background-color:#58FAF4;
+	background-image: url('pastas.jpg');
+}
+
+.botones {
+	margin: 0.5cm 0cm 0cm 0cm;
+    background-color: #5CAAF4; 
+    color: black;
+    border-style:dotted;
+    border-radius: 20%;
+   	padding: 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    width: 300px;
+}
+
+.botonesSecundarios {
+	 background-color: #E7AD18; /* Green */
+    border: none;
+    color: white;
+    padding: 6px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 25px;
+    margin: 4px 2px;
+    transition-duration: 0.1s;
+    cursor: pointer;
+}
+
+.botonesSecundarios:hover {
+    background-color: #0101DF;
+}

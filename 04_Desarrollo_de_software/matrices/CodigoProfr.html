@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- Usamos <!DOCTYPE html> para utilizar las utilidades de html5 -->
+
+<head>
+<title>Formulario con Matrices</title>
+<script type="text/javascript">
+	function guardar(){
+	//Validaciones:
+		//Validamos que los campos no sean vacios
+		if(document.form.nombre.value == ''){
+			alert('Falta Nombre');
+			document.form.nombre.focus();
+			return false;
+			}
+		if(document.form.apellido.value == ''){
+			alert('Falta Apellido');
+			document.form.apellido.focus();
+			return false;
+			}
+		if(document.form.edad.value == ''){
+			alert('Falta edad');
+			document.form.edad.focus();
+			return false;
+			}
+		if(document.form.telefono.value == ''){
+			alert('Falta Telefono');
+			document.form.telefono.focus();
+			return false;
+			}
+		if(document.form.correo.value == ''){
+			alert('Falta Correo');
+			document.form.correo.focus();
+			return false;
+			}
+		if(document.form.laboratorio.value == ''){
+			alert('Falta Laboratorio');
+			document.form.laboratorio.focus();
+			return false;
+			}
+		//Validamos que la edad sea entre 18 y 99 años
+		if(document.form.edad.value < 18 || document.form.edad.value > 99){
+			alert('La edad debe ser entre 18 y 99');
+			document.form.edad.focus();
+			return false;
+			}
+	}
+</script>
+</head>
+
+<body>
+<form name="form">
+<p>Nombre: <input type="text" id="nombre" value="Harry" onclick = "if(this.value=='Harry') this.value=''"/><br /></p>
+<p>Apellido: <input type="text" id="apellido" value="Potter" onclick = "if(this.value=='Potter') this.value=''"/><br /></p>
+<p>Edad: <input type="text" id="edad" value="37" onclick = "if(this.value=='37') this.value=''"/><br /></p>
+<p>Telefono: (+56) <input type="text" id="telefono" value="123456789" onclick = "if(this.value=='123456789') this.value=''"/><br /></p>
+<p>Correo: <input type="text" id="correo" value="harry@potter.com" onclick = "if(this.value=='harry@potter.com') this.value=''"/><br /></p>
+<p>Laboratorio: <input type="text" id="laboratorio" value="Hogwarts" onclick = "if(this.value=='Hogwarts') this.value=''"/><br /></p>
+
+<input type="button" onclick="guardar();" value="Guardar">
+</form>
+</body>

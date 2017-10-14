@@ -1,0 +1,26 @@
+<html>
+<head>
+
+<title>Ristorante di CORFO</title>
+<link rel="stylesheet" href="Formulario.css">
+
+<script type="text/javascript">
+
+		var n = prompt("ingres el numero de notas que desea agregar");
+		var aux = 0;
+		var arregloNotas=[];
+		for (var i = 0; i <= n-1; i++) {
+			arregloNotas[i]=prompt("ingres nota nota"+(i+1)+"");
+				aux=1;
+					do {
+						if(!isNaN(parseInt(arregloNotas[i]))) {
+					  	aux=0;
+						} else{arregloNotas[i]=prompt("ingrese un valor numero"+i+1+"")}
+					} while (aux==1);
+		}
+</script>
+</head>
+<body>
+
+</body>
+</html>
