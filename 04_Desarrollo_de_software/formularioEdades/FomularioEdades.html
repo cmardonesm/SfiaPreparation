@@ -24,10 +24,10 @@
 								return parseInt(document.getElementById("dias").value);
 							}
 							function obtenerMes(){
-								return parseInt(document.getElementById("mes").value);
+								return parseInt(document.getElementById("meses").value);
 							}
 							function obtenerAño(){
-								return parseInt(document.getElementById("dias").value);
+								return parseInt(document.getElementById("anos").value);
 							}
 
 							function obtenerCaracteres(){
@@ -154,9 +154,9 @@
 							mes=mes-1;
 							dia=dia2+30-dia1
 							}
-					document.getElementById("años").value=año;
-					document.getElementById("meses").value=mes;
-					document.getElementById("dias").value=dia;	
+					document.getElementById("ano").value=año;
+					document.getElementById("mes").value=mes;
+					document.getElementById("dia").value=dia;	
 				}
 
 				function ivertirCaracteres(){
@@ -221,7 +221,7 @@
 								<input class="botonesSecundarios" value="ver fibonacci" type="button" onclick="fibonacci()">
 							</div>
 		</form>
-	<form class="contenedor" action="" method="post" onsubmit="calcularEdad()">
+	<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
 <!--***************************Ejercicio N° 2**********************************************************-->
 			<h2>Ejercicio N°4: Encontrar la edad de una persona </h1>
 			<div>
@@ -234,22 +234,22 @@
 			</div>
 			<div>
 				<label for="name">Mes de nacimiento:</label>
-				<input type="text" id="mes"  />
+				<input type="text" id="meses"  />
 			</div>
 			<div>
 				<label for="name">Nacimiento de nacimiento:</label>
-				<input type="text" id="año"  />
+				<input type="text" id="anos"  />
 			</div>
 			<br> 
-			<button class="botones" type="submit">Calcular edad</button>
+			<input class="botones" value="Calcular edad" type="button" onclick="calcularEdad()">
 			<br> 
 			<div class="botones">
 				<label for="resul">Su edad es de:</label>
-				<input class="botonesSecundarios"  type="button" id="años">
+				<input class="botonesSecundarios"  type="button" id="ano">
 				<label for="resul">años</label>
-				<input class="botonesSecundarios"  type="button" id="meses">
+				<input class="botonesSecundarios"  type="button" id="mes">
 				<label for="resul">meses</label>
-				<input class="botonesSecundarios"  type="button" id="dias">
+				<input class="botonesSecundarios"  type="button" id="dia">
 				<label  for="resul">dias</label>
 				<input class="botonesSecundarios" value="invertiCadena" type="button" onclick="ivertirCaracteres()">
 			 </div>
