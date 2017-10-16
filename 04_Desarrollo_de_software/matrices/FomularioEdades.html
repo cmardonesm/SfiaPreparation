@@ -14,55 +14,47 @@
 								var x=document.getElementById("nombre").value;
 								if (x==""){
 									return false;
-								}else {
-								return x;	
 								}
+								return x;	
+								
 
 							}
 							function obtenerApellidoMatrises(){
 								var x=document.getElementById("apellido").value;
 								if (x==""){
 									return false;
-								}else {
-								return x;	
 								}
+								return x;	
 							}
 
 							function obtenerEdadMatrises(){
-								var x=parseInt(document.getElementById("edad").value)
-								if (isNaN(x)){;
+								var x=parseInt(document.getElementById("edad").value);
+								if (isNaN(x)||(x<18||x>100)){
 									return false;
 								}
-								if (x<18||x>100) {
-								return false;
-								} else {
 								return x;	
-								}
 							}
 
 							function obtenerTelefonoMatrises(){
-								var x=parseInt(document.getElementById("telefono").value)
+								var x=parseInt(document.getElementById("telefono").value);
 								if (x==""){
 									return false;
-								}else {
-								return x;	
 								}
+								return x;	
 							}
 							function obtenerCorreosMatrises(){
-								var x=parseInt(document.getElementById("correo").value)
+								var x=document.getElementById("correo").value;
 								if (x==""){
 									return false;
-								}else {
-								return x;	
 								}
+								return x;
 							}
 							function obtenerLaboratorioMatrises(){
-								var x=parseInt(document.getElementById("laboratorio").value)
-								if (x==""){
+								var x=parseInt(document.getElementById("laboratorio").value);
+								if (x==0){
 									return false;
-								}else {
-								return x;	
 								}
+								return x;	
 							}
 
 							function asignarResultado(resultado){
@@ -197,56 +189,78 @@
 					var edad=obtenerEdadMatrises();
 					var telefono=obtenerTelefonoMatrises();
 					var correo=obtenerCorreosMatrises();
-					var laborartorio=obtenerLaboratorioMatrises();
+					var laboratorio=obtenerLaboratorioMatrises();
 					var arregloDatos=new Array(6);
 					
 					if (nombre == false){
 						alert("Nombre mal ingresado");
-						
+						return;
 					}
 					if (apellido == false){
 						alert("Apellido Mal Ingresado");
-											}
+						return;				}
 
 					if (edad == false){
 						alert("Edad mal ingresada");
-						
+						return;
 					}
 					if (telefono == false){
 						alert("telefono mal ingresado");
-						
+						return;
 					}
 					if (correo == false){
 						alert("correo mal ingresado");
-					
+						return;
 					}
-					if (laborartorio == false){
+					if (laboratorio == false){
 						alert("laborartorio mal ingresado");
-					
-					}else{
-						arregloDatos=[nombre,apellido,edad,telefono,correo,laboratorio];
-						var myTable= "<table><tr><td style='width: 100px; color: red;'>HKJHJK</td>";
-
-						document.write("<td style='width: 100px; color: red; text-align: right;'>NOMBRE </td>");
-               			document.write("<td style='width: 100px; color: red; text-align: right;'>APELLLIDO </td>");
-               			document.write("<td style='width: 100px; color: red; text-align: right;'>EDAD </td></tr>");
-               			document.write("<td style='width: 100px; color: red; text-align: right;'>TELEFONO </td></tr>");
-               			document.write("<td style='width: 100px; color: red; text-align: right;'>CORREO </td></tr>");
-               			document.write("<td style='width: 100px; color: red; text-align: right;'>LABORATORIO </td></tr>");
-               			for (var i=0; i<6; i++) {
-    						myTable+="<tr><td style='width: 100px;'>Number " + i + " is:</td>";
-   							arregloDatos[i] = arregloDatos[i].toFixed(6);
-    						myTable+="<td style='width: 100px; text-align: right;'>" + arregloDatos[i] + "</td>";
-    						myTable+="<td style='width: 100px; text-align: right;'>" + arregloDatos[i] + "</td></tr>";
- 							 }  
-   							myTable+="</table>";
-   							document.write( myTable);
+						return;
 					}
-
-
-
+						arregloDatos=[nombre,apellido,edad,telefono,correo,laboratorio];
+    					return arregloDatos;
 				}
+				 
+				 function crearTablaDatos(){
+					var arregloDatos=guardarEnMatrices();
+					document.write("<table border=1>");
+					document.write("<th class='datos-usuario-table'>NOMBRE </th><th>APELLIDO</th><th>EDAD </th><th>TELEFONO </th><th>CORREO</th><th>LABORATORIO</th>");
+					document.write("<tr>");
+           			for (var i=0; i<6; i++) {
+						document.write("<td>"+arregloDatos[i]);
+						document.write("</td>");
+						}  
+					document.write("</tr>");
+				}
+
+				 function DatosEnDiagonal(){
+				 	var arregloDiagonal = new Array(7);
+				 	var arregloDatos=guardarEnMatrices();
+				 	console.log(arregloDatos);
+				 	for (var i = 0; i<=arregloDiagonal.length-1; i++) {
+				 		arregloDiagonal[i]= new Array(arregloDatos.length);
+				 	}
+				 	for (var i = 0; i<=arregloDatos.length-1; i++) {
+				 		arregloDiagonal[i][i]=arregloDatos[i];
+				 		//document.write(arregloDiagonal[i][i]);
+				 		//document.write(arregloDiagonal[i][i]+"<br>");	
+				 	}
+				 	document.write("<table border=20px background-color: #E7AF18 font-size:50px;>");
+					document.write("<tr><td>Nombre</td><td>Apellido</td><td>Edad</td><td>Telefono</td><td>Correo</td><td>Laboratorio</td></tr>");
+
+					for (var i = 0; i < arregloDatos.length; i++) {
+						document.write("<tr>");
+						for (var j = 0; j < arregloDatos.length; j++) {
+							document.write("<td>");
+							if (arregloDiagonal[i][j]!=undefined) {
+								document.write(arregloDiagonal[i][j]);	
+							}
+							document.write("</td>");
+						}
+						document.write("</tr>");
+					}
+				 }
 			</script>
+
 
 <h1>EJERCICIOS FORMULARIOS WEB  </h1>
 		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
@@ -256,33 +270,34 @@
 					</div>
 
 					<div>
-						<label for="primerValor">Nombre:</label><br>
-						<input type="text" id="nombre" name="primerValor" /><br>
+						<label for="nombre">Nombre:</label><br>
+						<input type="text" id="nombre"  size="20" maxlength="20" value="Carlos"/><br>
 					</div>
 					<!--  obtener los valores desde el formulario -->
 					<div>
-						<label for="segundoValor">Apellido:</label><br>
-						<input type="text" id="apellido" name="segundoValor" /><br>
+						<label for="apellido">Apellido:</label><br>
+						<input type="text" id="apellido" value="Mardones"/><br>
 					</div>
 					<div>
-						<label for="segundoValor">Edad:</label><br>
-						<input type="number" id="edad" name="segundoValor" /><br>
+						<label for="edad">Edad:</label><br>
+						<input type="number" id="edad" value="27"/><br>
 					</div>
 					<div>
-						<label for="segundoValor">Telefono:</label><br>
-						<input type="text" id="telefono" name="segundoValor" /><br>
+						<label for="telefono">Telefono:</label><br>
+						<input type="text" id="telefono" value="79373783"/><br>
 					</div>
 					<div>
-						<label for="segundoValor">Correo:</label><br>
-						<input type="email" id="correo" name="segundoValor" /><br>
+						<label for="correo">Correo:</label><br>
+						<input type="email" id="correo" value="c@gmail.com"/><br>
 					</div>
 					<div>
-						<label for="segundoValor">Laboratorio:</label><br>
-						<input type="number" id="laboratorio" name="segundoValor" /><br>
+						<label for="laborartorio">Laboratorio:</label><br>
+						<input type="number" id="laboratorio" name="nombreParaElServidor" value="11"/><br>
 					</div>
 		
 							<div class="botones">
-								<input class="botonesSecundarios" value="Ingresar datos" type="button" onclick="guardarEnMatrices()">
+								<input class="botonesSecundarios" value="Ingresar datos" type="button" onclick="crearTablaDatos()">
+								<input class="botonesSecundarios" value="Diagonal" type="button" onclick="DatosEnDiagonal()">
 							</div>
 		</form>
 	

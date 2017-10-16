@@ -36,7 +36,22 @@ color:black;
 	font-size:20px;
 	align:"center";
 }
-div{ margin: 0,2cm 0cm 0cm 0,5cm;}
+div{ margin: 0,2px 0px 0px 0,5px;}
+
+.datos-usuario-table {
+    padding: 80px !important;
+    text-decoration: none;
+    opacity: 1;
+    background-color:#80AAF4;
+    background-origin: padding-box;
+    margin: 0px 4px 3px 4px;
+    width: 200px;
+    height:50px;
+}
+th, td {
+    padding: 15px;
+    text-align: left;
+}
 
 .formatoForm{
 	opacity: 0.5;
@@ -47,10 +62,10 @@ text-decoration: none;
 opacity: 1;
 background-color:#80AAF4;
 background-origin: padding-box;
-margin: 0cm 4cm 3cm 4cm;
+margin: 0px 4px 3px 4px;
 width: 922px;
 height:600px;
-margin-bottom: 7cm;
+margin-bottom: 7px;
 
 }
 
@@ -61,7 +76,7 @@ margin-bottom: 7cm;
 }
 
 .botones {
-	margin: 0.5cm 0cm 0cm 0cm;
+	margin: 0.5px 0px 0px 0px;
     background-color: #5CAAF4; 
     color: black;
     border-style:dotted;
