@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Ristorante di CORFO</title>
+<link rel="stylesheet" href="Formulario.css">
+
+</head>
+<body>
+
+			<script type="text/javascript">
+
+			
+				function obtenerValor1(){
+					return parseInt(document.getElementById("valor1").value);
+				}
+				
+	
+
+				function segundaFuncionMultiplicacion(){
+				
+					var valor1 = obtenerValor1();
+					var arregloDatos=new Array(11);
+					if (isNaN(valor1)){
+						alert("El Valor 1 esta mal ingresado")
+						return false;
+					}
+					for (var i = 0; i <11; i++) {
+						arregloDatos[i]=i*valor1
+					}
+					document.write("<h1>Tabla del</h1>"+valor1);
+					document.write("<table border=1>");
+					document.write("<th>Esta es la tabla de multiplicar</th>");
+					document.write("<tr>");
+           			for (var i=0; i<11; i++) {
+						document.write("<td>"+arregloDatos[i]);
+						document.write("</td>");
+						}  
+					document.write("</tr>");
+				}
+
+			</script>
+
+<h1>EJERCICIOS FORMULARIOS WEB  </h1>
+		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
+
+					<div>
+						<h2>Bienvenido a la calculadora</h2>
+					</div>
+
+					<div>
+				        <label for="msg">Intrucciones:</label>
+				        <textarea id="msg">Ingrese un numero</textarea>
+				    </div>
+
+					<div>
+						<label for="primerValor">Valor1:</label>
+						<input type="number" id="valor1" name="primerValor" />
+					</div>
+		
+							<!-- creación de los botones para las operaciones -->
+							<div class="botones">
+								<input class="botonesSecundarios" value="Ver tabla de multiplicar" type="button" onclick="segundaFuncionMultiplicacion()">
+
+							</div>
+		</form>
+		
+</body>
+</html>

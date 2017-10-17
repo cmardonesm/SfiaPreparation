@@ -1,0 +1,61 @@
+body
+{
+	background-color: white;
+}
+
+h1
+{
+	color: blue; 
+	font-family: Tahoma; 	
+}
+
+li
+{
+	color: blue; 
+}
+
+p
+{
+	color: red; 
+	font-family: Tahoma; 
+	font-size: 14px;
+}
+
+img
+{
+	border-color: #1ef21e;
+}
+
+div 
+{
+	position: absolute; 
+	margin-top:30%; 
+	text-align: center; 
+	width: 90%
+}
+
+.parrafo1
+{
+	color: blue; 
+	font-family: Tahoma; 
+	font-size: 14px;
+}
+
+.parrafo2
+{
+	color: black; 
+	font-family: Tahoma; 
+	font-size: 54px;
+}
+
+.piepagina
+{
+	color: #cbcb00; 
+	font-family: Tahoma; 
+	font-size: 8px;
+}
+
+a:link {color: blue; text-decoration:none;}
+a:visited {color: blue; text-decoration:none;}
+a:active {color: red; text-decoration:none;}
+a:hover {color: red; text-decoration:none;}

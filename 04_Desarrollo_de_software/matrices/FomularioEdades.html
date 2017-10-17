@@ -12,7 +12,7 @@
 
 							function obtenerNombreMatrises(){
 								var x=document.getElementById("nombre").value;
-								if (x==""){
+								if (x==""||x.length>=30){
 									return false;
 								}
 								return x;	
@@ -184,6 +184,7 @@
 				}
 
 				function guardarEnMatrices(){
+					var NumeroIngresos=prompt("Por favor ngrese el numero de usuario personas que va a registrar");
 					var nombre=obtenerNombreMatrises();
 					var apellido=obtenerApellidoMatrises();
 					var edad=obtenerEdadMatrises();
@@ -258,7 +259,7 @@
 						}
 						document.write("</tr>");
 					}
-				 }
+				}
 			</script>
 
 
@@ -271,7 +272,7 @@
 
 					<div>
 						<label for="nombre">Nombre:</label><br>
-						<input type="text" id="nombre"  size="20" maxlength="20" value="Carlos"/><br>
+						<input type="text" id="nombre"  size="30" maxlength="30" value="Carlos"/><br>
 					</div>
 					<!--  obtener los valores desde el formulario -->
 					<div>
@@ -293,7 +294,7 @@
 					<div>
 						<label for="laborartorio">Laboratorio:</label><br>
 						<input type="number" id="laboratorio" name="nombreParaElServidor" value="11"/><br>
-					</div>
+					</div><br>
 		
 							<div class="botones">
 								<input class="botonesSecundarios" value="Ingresar datos" type="button" onclick="crearTablaDatos()">

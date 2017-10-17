@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ristorante di CORFO</title>
+<link rel="stylesheet" href="Formulario.css">
+</head>
+<body>
+			<script type="text/javascript">
+
+							function obtenerNombreMatrises(){
+								var x=document.getElementById("nombre").value;
+								if (x==""||!isNaN(x)){
+									return false;
+								}
+								return x;	
+
+							}
+							function obtenerApellidoMatrises(){
+								var x=document.getElementById("apellido").value;
+								if (x==""){
+									return false;
+								}
+								return x;	
+							}
+
+							function obtenerEdadMatrises(){
+								var x=parseInt(document.getElementById("edad").value);
+								if (isNaN(x)||(x<18||x>100)){
+									return false;
+								}
+								return x;	
+							}
+							function obtenerSexoMatrises(){
+								var x=document.getElementById("Sexo").value;
+								if (x!=="M"||x==!"F"){
+									return false;
+								}
+								return x;	
+							}
+
+							function obtenerCorreosMatrises(){
+								var x=document.getElementById("correo").value;
+								if (x==""){
+									return false;
+								}
+								return x;
+							}
+
+							function obtenerTelefonoMatrises(){
+								var x=parseInt(document.getElementById("telefono").value);
+								if (x==""||x/8<=1){
+									return false;
+								}
+								return x;	
+							}
+							
+							function asignarResultado(resultado){
+								document.getElementById("resul").value=resultado;
+							}
+							function concatenarResultado(valorAConcatenar){
+								document.getElementById("resul").value+=valorAConcatenar;
+							}
+				
+				function guardarEnMatrices(){		
+						var nombre=obtenerNombreMatrises();
+						var apellido=obtenerApellidoMatrises();
+						var edad=obtenerEdadMatrises();
+						var sexo=obtenerSexoMatrises();
+						var correo=obtenerCorreosMatrises();
+						var telefono=obtenerTelefonoMatrises();
+											
+						var arregloDatos=new Array(6);
+						
+						if (nombre == false){
+							alert("Nombre mal ingresado");
+							return;
+						}
+						if (apellido == false){
+							alert("Apellido Mal Ingresado");
+							return;				}
+
+						if (edad == false){
+							alert("Edad mal ingresada");
+							return;
+						}
+						if (telefono == false){
+							alert("Telefono mal ingresado");
+							return;
+						}
+						if (correo == false){
+							alert("correo mal ingresado");
+							return;
+						}
+						if (sexo == false){
+							alert("Sexo mal ingresado");
+							return;
+						}
+
+							arregloDatos=[nombre,apellido,edad,telefono,correo,sexo];
+							document.write("<table border=1>");
+							document.write("<th class='datos-usuario-table'>NOMBRE </th><th>APELLIDO</th><th>EDAD </th><th>TELEFONO </th><th>CORREO</th><th>SEXO</th>");
+							document.write("<tr>");
+           						for (var i=0; i<6; i++) {
+									document.write("<td>"+arregloDatos[i]);
+									document.write("</td>");
+								}  
+							document.write("</tr>");
+					}
+				
+			</script>
+
+<h1>EJERCICIOS FORMULARIOS WEB  </h1>
+		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
+
+					<div>
+						<h2>Ejercicio llenado de matrices con fomulario</h2>
+					</div>
+
+					<div>
+						<label for="nombre">Nombre:</label><br>
+						<input type="text" id="nombre"  size="30" maxlength="30" value="Carlos"/><br>
+					</div>
+					<!--  obtener los valores desde el formulario -->
+					<div>
+						<label for="apellido">Apellido:</label><br>
+						<input type="text" id="apellido" value="Mardones"/><br>
+					</div>
+					<div>
+						<label for="edad">Edad:</label><br>
+						<input type="number" id="edad" value="27"/><br>
+					</div>
+					<div>
+						<label for="Sexo">Sexo:</label><br>
+						<input type="text" id="Sexo" value="M"/><br>
+					</div>
+					<div>
+						<label for="correo">Correo:</label><br>
+						<input type="email" id="correo" value="c@gmail.com"/><br>
+					</div>
+					<div>
+						<label for="telefono">Telefono:</label><br>
+						<input type="text" id="telefono" value="79373783" size="8" maxlength="38"/><br>
+					</div>		
+							<div class="botones">
+								<input class="botonesSecundarios" value="Ingresar datos" type="button" onclick="guardarEnMatrices()">
+							</div>
+		</form>
+	
+		
+</body>
+</html>

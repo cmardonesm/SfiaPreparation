@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+
+<head>
+<style>
+ table { border: 1px;
+ } 
+ td,th{	
+	border: 1px;
+ }
+</style>
+<title>Mi primera web con matrices</title>
+<script type="text/javascript">
+	function guardar()
+	{
+		if (document.form.nombre.value.trim()=='')
+			{
+				alert('falta nombre');
+				document.form.nombre.focus();
+				return false;
+			}
+		if (document.form.apellido.value=='')
+			{
+				alert('falta apellido');
+				document.form.apellido.focus();
+				return false;
+			}
+		if (document.form.edad.value=='')
+			{
+				alert('falta edad');
+				document.form.edad.focus();
+				return false;
+			}
+		if (document.form.edad.value< 18 || document.form.edad.value >100)
+			{
+				alert('debe ingresar edad entre 18 y 100');
+				document.form.edad.focus();
+				return false;
+			}
+		if (document.form.telefono.value=='')
+			{
+				alert('falta telefono');
+				document.form.telefono.focus();
+				return false;
+			}
+		if (document.form.email.value=='')
+			{
+				alert('falta email');
+				document.form.email.focus();
+				return false;
+			}
+		if (document.form.laboratorio.value=='')
+			{
+				alert('falta laboratorio');
+				document.form
+				.laboratorio.focus();
+				return false;
+			}
+		var arr = new Array(6);
+		
+		arr= [document.form.nombre.value, document.form.apellido.value,
+		document.form.edad.value, document.form.telefono.value,
+		document.form.email.value , document.form.laboratorio.value];
+		
+		document.write("<table border=1>");
+		document.write("<tr><td>Nombre</td><td>Apellido</td><td>Edad</td>");
+		document.write("<td>Telefono</td><td>Correo</td><td>Laboratorio</td></tr>");
+		document.write("<tr>");
+		for(i=0;i<6;i++)
+		{
+		 document.write("<td>" + arr[i]);
+		 document.write("</td>");
+		}
+		document.write("</tr>");
+		
+		document.write("</table>");
+
+		
+		var arr2 = new Array(7);
+		
+		for(var i=0; i< 7; i++)
+		{
+			 arr2[i] = new Array(6);
+		}
+		
+		for(i=0; i<7; i++)
+		{	
+			for(j=0;j<6;j++)
+			{
+				arr2[i][j]= i +"+" + j;
+			}
+		}
+		
+		for(i=0; i<7; i++)
+		{	
+			for(j=0;j<6;j++)
+			{
+				document.write(arr2[i][j] + "<br>");
+			}
+		}
+		
+		for(i=0; i<7; i++)
+		{
+			arr2[i][i]= arr[i];
+		}
+		
+		document.write("<table border=1>");
+		document.write("<tr><td>Nombre</td><td>Apellido</td><td>Edad</td>");
+		document.write("<td>Telefono</td><td>Correo</td><td>Laboratorio</td></tr>");
+		
+		for(i=0; i<7; i++)
+		{	
+			document.write("<tr>");
+			for(j=0;j<6;j++)
+			{	document.write("<td>");
+				document.write(arr2[i][j]);
+				document.write("</td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+
+
+		
+
+		
+	}
+</script>
+
+</head>
+<body>
+<form name="form">
+<p>Nombre: <input type="text" id="nombre" value="Carlos"/><br /></p>
+<p>Apellido: <input type="text" id="apellido" value="Fuenzalida"/><br /></p>
+<p>Edad: <input type="number" id="edad" value="30"/><br /></p>
+<p>Telefono: <input type="number" id="telefono" value="62189970" /><br /></p>
+<p>Correo: <input type="email" id="email" value="cfuenzalida@sitrans.class"/><br /></p>
+<p>Laboratorio: <input type="text" id="laboratorio" value="l11"/><br /></p>
+
+<input type="button" onclick="guardar();" value="Guardar">
+</form>
+
+</body>
+
+
+</html>
