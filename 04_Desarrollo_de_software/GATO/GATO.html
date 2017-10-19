@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Ristorante di CORFO</title>
+<link rel="stylesheet" href="Formulario.css">
+</head>
+<body>
+			<script type="text/javascript">
+				var jugador=0;
+				var convinacionj1="";
+				var convinacionj2="";
+
+				function asignarResultadoA(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("a").value="X";
+						convinacionj1+="a";
+						ganador();
+						return; 
+					}	
+					document.getElementById("a").value="O";
+						convinacionj2+="a";
+						ganador();
+				}
+				function asignarResultadoB(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("b").value="X";
+						convinacionj1+="b";
+						ganador()
+						return; 
+					}	
+					document.getElementById("b").value="O";
+						convinacionj2+="b";
+						ganador();
+				}
+				function asignarResultadoC(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("c").value="X";
+						convinacionj1+="c";
+						ganador()
+						return; 
+					}	
+					document.getElementById("c").value="O";
+						convinacionj2+="c";
+						ganador()
+
+				}
+				function asignarResultadoD(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("d").value="X";
+						convinacionj1+="d";
+						ganador()
+						return; 
+					}	
+					document.getElementById("d").value="O";
+					convinacionj2+="d";
+					ganador()
+				}
+
+				function asignarResultadoE(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("e").value="X";
+						convinacionj1+="e";
+						ganador()
+						return; 
+					}	
+					document.getElementById("e").value="O";
+					convinacionj2+="e";
+					ganador()
+				}
+				function asignarResultadoF(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("f").value="X";
+						convinacionj1+="f";
+						ganador()
+						return; 
+					}	
+					document.getElementById("f").value="O";
+					convinacionj2+="f";
+					ganador()
+				}
+				function asignarResultadoG(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("g").value="X";
+						convinacionj1+="g";
+						ganador()
+						return; 
+					}	
+					document.getElementById("g").value="O";
+					convinacionj2+="g";
+					ganador()
+				}
+				function asignarResultadoH(){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("h").value="X";
+						convinacionj1+="h";
+						ganador()
+						return; 
+					}	
+					document.getElementById("h").value="O";
+					convinacionj2+="h";
+					ganador()
+				}
+				function asignarResultadoI(resultado){
+					jugador=jugador+1;
+					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
+						document.getElementById("i").value="X";
+						convinacionj1+="i";
+						ganador()
+						return; 
+					}	
+					document.getElementById("i").value="O";
+					convinacionj2+="i";
+					ganador()
+				}
+			
+				function ganador(){
+					//alert(convinacionj1);
+					//alert(convinacionj2);
+					if (convinacionj1=="abc" || convinacionj1=="def" || convinacionj1=="ghi" || convinacionj1=="aei" || convinacionj1=="ceg" || convinacionj1=="adg" || convinacionj1=="beh" || convinacionj1=="cfi") {
+						alert("El jugador 1 ha ganado");
+					}
+					if (convinacionj2=="abc" || convinacionj2=="def" || convinacionj2=="ghi" || convinacionj2=="aei" || convinacionj2=="ceg" || convinacionj2=="adg" || convinacionj2=="beh" || convinacionj2=="cfi") {
+						alert("El jugador 2 ha ganado");
+					}
+					if(jugador>=9){
+						alert("Han Empatado");
+					}
+					return;
+				}			
+				
+			</script>
+
+<h1>EJERCICIOS EL GATO ELECTRONICO  </h1>
+		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
+			<table style="width:10%">
+							  <tr>
+							    <td><input class="botonesSecundarios" id="a"  type="button" onclick="asignarResultadoA()"></th>
+							    <td><input class="botonesSecundarios" id="b"  type="button" onclick="asignarResultadoB()"></th> 
+							    <td><input class="botonesSecundarios" id="c"  type="button" onclick="asignarResultadoC()"></th>
+							  </tr>
+							  <tr>
+							    <td><input class="botonesSecundarios" id="d"  type="button" onclick="asignarResultadoD()"></td>
+							    <td><input class="botonesSecundarios" id="e"  type="button" onclick="asignarResultadoE()"></td> 
+							    <td><input class="botonesSecundarios" id="f"  type="button" onclick="asignarResultadoF()"></td>
+							  </tr>
+							  <tr>
+							    <td><input class="botonesSecundarios" id="g"  type="button" onclick="asignarResultadoG()"></td>
+							    <td><input class="botonesSecundarios" id="h"  type="button" onclick="asignarResultadoH()"></td> 
+							    <td><input class="botonesSecundarios" id="i"  type="button" onclick="asignarResultadoI()"></td>
+							  </tr>
+							</table>
+		</form>
+</body>
+</html>

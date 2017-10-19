@@ -6,6 +6,10 @@
 </head>
 <body>
 			<script type="text/javascript">
+				var 
+				var arregloDatos
+				var arr
+				
 
 							function obtenerNombreMatrises(){
 								var x=document.getElementById("nombre").value;
@@ -39,11 +43,19 @@
 							}
 
 							function obtenerCorreosMatrises(){
-								var x=document.getElementById("correo").value;
-								if (x==""){
+								var correo=document.getElementById("correo").value;
+
+								/*return isValidEmail()
+								if (x==""||){
 									return false;
+								}*/
+								
+								var validador=/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+								if (!validador.test(correo)){
+									alert ("correo mal ingresado");
+									document.miFomulario.correo.focus();
+									return false; 
 								}
-								return x;
 							}
 
 							function obtenerTelefonoMatrises(){
@@ -110,7 +122,7 @@
 			</script>
 
 <h1>EJERCICIOS FORMULARIOS WEB  </h1>
-		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
+		<form name="miFomulario" class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
 
 					<div>
 						<h2>Ejercicio llenado de matrices con fomulario</h2>
@@ -135,7 +147,7 @@
 					</div>
 					<div>
 						<label for="correo">Correo:</label><br>
-						<input type="email" id="correo" value="c@gmail.com"/><br>
+						<input type="email" id="correo" /><br>
 					</div>
 					<div>
 						<label for="telefono">Telefono:</label><br>
