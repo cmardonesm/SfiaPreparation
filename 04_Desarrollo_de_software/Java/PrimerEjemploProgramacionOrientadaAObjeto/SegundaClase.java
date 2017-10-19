@@ -18,6 +18,7 @@ public class SegundaClase
         // initialise instance variables
         x = 0;
     }
+    
 
     /**
      * An example of a method - replace this comment with your own
