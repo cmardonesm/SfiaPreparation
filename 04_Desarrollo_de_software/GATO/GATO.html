@@ -9,11 +9,88 @@
 				var jugador=0;
 				var convinacionj1="";
 				var convinacionj2="";
+				var arregloJugadas=new Array(3);
+				for (var i =0 ; i <= 2; i++) {
+					arregloJugadas[i]=[0,0,0];
+				}
+				console.log(arregloJugadas);
+
+				function asignarResultado(i,j,id){
+					jugador+=1;
+					if((jugador%2)!=0){
+						document.getElementById(id).value="X";
+						arregloJugadas[i][j]="X";
+					}else{
+						document.getElementById(id).value="O";
+						arregloJugadas[i][j]="O";
+					}
+					verificarGanador();
+				}
+
+				function verificarGanador(){
+					console.log(arregloJugadas);
+					var ganador=jugador%2;
+					var sumaFilas=0;
+					var sumaColumnas=0;
+					var sumaDiagonal=0;
+
+					var j=0;
+					for (var i = 0; i <= 2; i++) {
+						for (var j = 0; j <= 2; j++) {
+							if (arregloJugadas[i][j]=="X" && ganador!=0){
+								sumaFilas+=1;
+							}
+							if (arregloJugadas[j][i]=="X" && ganador!=0){
+								sumaColumnas+=1;
+							}
+							if (arregloJugadas[i][j]=="O" && ganador==0){
+								sumaFilas+=1;
+							}
+							if (arregloJugadas[j][i]=="O" && ganador==0){
+								sumaColumnas+=1;
+							}
+
+						}
+						if (ganador==0 && (sumaFilas==3 || sumaColumnas==3)) {
+							alert("El jugador 2 ha ganado");
+							return;
+						}
+						if (ganador!=0 && (sumaFilas==3 || sumaColumnas==3)) {
+							alert("El jugador 1 ha ganado");
+							return;
+						}
+						sumaFilas=0;
+						sumaColumnas=0;
+
+					}
+					for (var i = 0; i <= 2; i++) {
+							if (arregloJugadas[i][i]=="X" &&ganador!=0){
+								sumaDiagonal+=1
+							}	
+							if (arregloJugadas[i][i]=="O"&&ganador==0){
+								sumaDiagonal+=1
+							}	
+						}
+
+						if (ganador!=0 && sumaDiagonal==3) {
+							alert("El jugador 1 ha ganado");
+							return;
+						}
+						if (ganador==0 && sumaDiagonal==3) {
+							alert("El jugador 2 ha ganado");
+							return;
+						}
+
+
+						sumaDiagonal=0;
+					
+				}
 
 				function asignarResultadoA(){
 					jugador=jugador+1;
 					if (jugador==1||jugador==3||jugador==5||jugador==7||jugador==9) {
 						document.getElementById("a").value="X";
+
 						convinacionj1+="a";
 						ganador();
 						return; 
@@ -141,22 +218,22 @@
 <h1>EJERCICIOS EL GATO ELECTRONICO  </h1>
 		<form class="contenedor" action="" method="post" onsubmit="PrimeraFuncion()">
 			<table style="width:10%">
-							  <tr>
-							    <td><input class="botonesSecundarios" id="a"  type="button" onclick="asignarResultadoA()"></th>
-							    <td><input class="botonesSecundarios" id="b"  type="button" onclick="asignarResultadoB()"></th> 
-							    <td><input class="botonesSecundarios" id="c"  type="button" onclick="asignarResultadoC()"></th>
-							  </tr>
-							  <tr>
-							    <td><input class="botonesSecundarios" id="d"  type="button" onclick="asignarResultadoD()"></td>
-							    <td><input class="botonesSecundarios" id="e"  type="button" onclick="asignarResultadoE()"></td> 
-							    <td><input class="botonesSecundarios" id="f"  type="button" onclick="asignarResultadoF()"></td>
-							  </tr>
-							  <tr>
-							    <td><input class="botonesSecundarios" id="g"  type="button" onclick="asignarResultadoG()"></td>
-							    <td><input class="botonesSecundarios" id="h"  type="button" onclick="asignarResultadoH()"></td> 
-							    <td><input class="botonesSecundarios" id="i"  type="button" onclick="asignarResultadoI()"></td>
-							  </tr>
-							</table>
+			  <tr>
+			    <td><input class="botonesSecundarios" id="a"  type="button" onclick="asignarResultado(0,0,'a')"></th>
+			    <td><input class="botonesSecundarios" id="b"  type="button" onclick="asignarResultado(0,1,'b')"></th> 
+			    <td><input class="botonesSecundarios" id="c"  type="button" onclick="asignarResultado(0,2,'c')"></th>
+			  </tr>
+			  <tr>
+			    <td><input class="botonesSecundarios" id="d"  type="button" onclick="asignarResultado(1,0,'d')"></td>
+			    <td><input class="botonesSecundarios" id="e"  type="button" onclick="asignarResultado(1,1,'e')"></td> 
+			    <td><input class="botonesSecundarios" id="f"  type="button" onclick="asignarResultado(1,2,'f')"></td>
+			  </tr>
+			  <tr>
+			    <td><input class="botonesSecundarios" id="g"  type="button" onclick="asignarResultado(2,0,'g')"></td>
+			    <td><input class="botonesSecundarios" id="h"  type="button" onclick="asignarResultado(2,1,'h')"></td> 
+			    <td><input class="botonesSecundarios" id="i"  type="button" onclick="asignarResultado(2,2,'i')"></td>
+			  </tr>
+			</table>
 		</form>
 </body>
 </html>
