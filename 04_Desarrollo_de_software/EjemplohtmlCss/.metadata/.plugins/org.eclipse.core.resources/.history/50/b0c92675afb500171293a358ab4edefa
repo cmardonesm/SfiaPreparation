@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>XCargo</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/estilos.css" />
+	</head>
+	<body>
+		
+		<div style="color: blue; font-size: 25px; width: 100%; margin-left:0px; margin-top: 20px; margin-bottom: 20px"><img src="imagenes/logo.png" height = "100" width= "140"/></div>
+		<div style="color: blue";><table border="1 solid powderblue" cellpadding="1" cellspacing="1" width ="40% "  align="right"color="blue">
+				<tr>
+				<th>home</th>
+				<th>nosotros</th>
+				<th>servicios</th>
+				<th>contacto</th>
+				
+			</table>
+				
+		</div>
+		
+			<table border="1" cellpadding="10" cellspacing="10" width="90%" align="center">
+			<tr>
+				<td width="50%">
+					<p style="color: blue">RETIRO &nbsp &nbsp &nbsp<input type="button" value="Entrega en sucursal" onclick="sucursal"</td><br><br></p>
+					<p><select id="dirección frecuente" width:"200"></p>
+					<option value="1">direccciónFrec</option>
+					<option value="2">direccción1</option>
+					<option value="2">direccción2</option>
+					<option value="2">direccción3</option>
+					
+					
+					</select>
+					
+			<div><input type="text" id="nombre" placeholder="Nombre"/></div>
+			<div><input type="text" id="direccion" placeholder="Direccion"/></div>
+			<div><input type="text" id="telèfono" placeholder="Telèfono"/></div><br>
+			
+			<p><select id="tamaño" width:"200">
+					<option value="0">Tamaño</option>
+					<option value="1">chico</option>
+					<option value="2">mediano</option>
+					<option value="3">grande</option>
+					
+					
+					</select>
+					
+			<select id="tipo envío" width:"200"><br><br>
+					<option value="0">Tipo de envío</option>
+					<option value="1">simple</option>
+					<option value="2">compuesto</option>
+				
+			</select></p>
+			
+			
+        <div style="color: blue;">Seleccion fecha de Retiro&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp<input type="text" id="fecha" placeholder="Fecha"</div></td><br><br>
+	
+
+			<td colspan="2" width="50%";>		
+			<p style="color: blue" margin-top: 2em >ENTREGA &nbsp &nbsp &nbsp<input type="button" value="Dirección frecuente" onclick="dirección frecuente"</td>
+			<p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp</p>
+				
+			<div><input type="text" id="nombre" placeholder="Nombre"/></div>
+			<div><input type="text" id="direccion" placeholder="Direccion"/></div>
+			<div><input type="text" id="telèfono" placeholder="Telèfono"/></div><br>
+			<div><input type="text" id="detalles receptor" placeholder="Detalles del receptor"</td>
+			<p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp</p>
+	
+			</tr>
+				
+				<tr>
+					<td colspan="3">
+					<div style="color: blue; font-size:15; width: 100%; margin-left:0px; margin-right:0px; margin-top: 0;">
+					
+						
+				<div align="center">
+				<p style="color: blue">VALOR ENVIO&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp
+					&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbspSALDO DISPONIBLE
+					&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp<input type="button" value="Solicitar Envío" onclick="solicitar envío"><br>
+					&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp
+					&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp
+					&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp
+					&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbsp&nbsp &nbsp&nbsp &nbsp &nbspAgregar Saldo</p>		
+			   </div>
+				
+				</td>
+				</tr>
+			
+				<tr>
+					<td colspan="3">
+					<p>&nbsp &nbsp IMAGEN &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp</p>
+					<p>&nbsp &nbsp &nbsp&nbsp &nbsp &nbsp &nbsp&nbsp &nbsp &nbsp</p>
+					
+		
+				</tr>
+				
+				<tr>
+					<div style="color: blue; font-size: 15; width: 100%; margin-left:0px; margin-right:0px; margin-top: 0;">
+					
+					<td width="30%">
+					<p>graficos</p>
+					</td>	
+					
+					<td width="30%">
+						<a><h3>SEGUIMIENTO</h3></a><br>
+				        <a><h5>Ingresa tu número o ID</h5></a><br>
+						<input type="text" name="buscar" placeholder="Tracking"/>
+					</td>	
+					
+					<td width= "30%">
+					<a><h3>HISTORIAL</h3></a><br>
+				    <p><h5>Pedido1</h5></p><br>
+					<p><h5>Pedido2</h5></p><br>
+					<p><h5>Pedido3</h5></p><br>
+					</td>
+				</tr>
+				
+			
+			
+			
+		</table>
+		
+		
+		
+		
+		
+		
+	</body>
+</html>
