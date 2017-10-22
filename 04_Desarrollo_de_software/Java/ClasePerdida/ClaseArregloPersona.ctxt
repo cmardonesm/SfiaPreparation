@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ClaseArregloPersona
+comment1.params=
+comment1.target=ClaseArregloPersona()
+comment2.params=numeroElementosArreglo
+comment2.target=ClaseArregloPersona(int)
+comment3.params=persona
+comment3.target=void\ ingresarPersonaAlArreglo(Persona)
+comment4.params=
+comment4.target=void\ mostrarPersonasDelArreglo()
+comment5.params=
+comment5.target=Persona\ encontrarMayor()
+comment6.params=args
+comment6.target=void\ main(java.lang.String[])
+numComments=7

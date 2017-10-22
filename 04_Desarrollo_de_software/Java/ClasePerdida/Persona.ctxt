@@ -2,6 +2,8 @@
 comment0.target=Persona
 comment1.params=
 comment1.target=Persona()
+comment10.params=args
+comment10.target=void\ main(java.lang.String[])
 comment2.params=nombre\ apellido\ edad
 comment2.target=Persona(java.lang.String,\ java.lang.String,\ int)
 comment3.params=
@@ -18,4 +20,4 @@ comment8.params=edad
 comment8.target=void\ setEdad(int)
 comment9.params=
 comment9.target=void\ ToString()
-numComments=10
+numComments=11
