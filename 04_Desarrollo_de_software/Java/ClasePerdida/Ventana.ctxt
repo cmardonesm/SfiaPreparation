@@ -1,0 +1,14 @@
+#BlueJ class context
+comment0.target=Ventana
+comment0.text=\r\n\r\n\ Clase\ Ventana\r\n\r\n\ Muestra\ la\ estructuta\ que\ deberia\ tener\ una\ Ventana\ en\ Java\ con\ la\ libreria\r\n\r\n\ Swing,\ contiene\ una\ etiqueta,\ un\ caja\ de\ texto\ y\ un\ boton,\ que\ tiene\ la\r\n\r\n\ accion\ de\ mostrar\ el\ texto\ en\ la\ caja\ por\ una\ ventana\ de\ mensaje.\r\n\r\n\ @author\ Daniel\ Alvarez\ (a3dany)\r\n\r\n
+comment1.params=
+comment1.target=Ventana()
+comment2.params=
+comment2.target=void\ configurarVentana()
+comment3.params=
+comment3.target=void\ inicializarComponentes()
+comment4.params=e
+comment4.target=void\ actionPerformed(java.awt.event.ActionEvent)
+comment5.params=args
+comment5.target=void\ main(java.lang.String[])
+numComments=6
