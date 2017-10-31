@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Proyecto</title>
+	<link rel="stylesheet" type="text/css" href="css/hojaestilo.css">
+	<link href="https://fonts.googleapis.com/css?family=Anton|Droid+Sans|Lato|Open+Sans" rel="stylesheet">
+</head>
+	<body>
+	<table width="70%"  align="center" bgcolor="white">
+     <tr>
+      <td>
+		 <table width="100%">
+			  <tr>
+				<td style="width: 30%"; align="center">
+			  		<img src="image/logo_despachos.png"/ height="80px;">
+			    </td>
+			    <td style="width: 10%"> </td>
+				<td valign="center">
+					<table width="100%" border="0">
+						<tr>
+						  <th><a href="index.html">Home</a></th>
+						  <th><a href="nosotros.html">Nosotros</a></th>
+						  <th ><a href="servicioas.html">Servicios</a></th>
+						  <th ><a href="contacto.html">Contacto</a></th>
+						</tr>
+					</table>
+			    </td>
+			  </tr>
+		 </table>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <table width="80%" border="0" cellpadding="1" align="center" bgcolor="#f0f8fb">
+         <tr>
+			  <td colspan="2" style="height: 50px;">
+			  <table width="100%" border="0" cellpadding="1" bgcolor="#0072bc">
+				 <tr>
+				  <td width="20%"><img src="image/new_add_user_16734.png" height="20%"></td>
+				  <td class="texto2">Crear una nueva cuenta de usuario para XCargo.</td>
+				</tr>
+			  </table>
+			  </td>
+		</tr>
+		<tr>
+			  <td colspan="2">&nbsp;</td>
+		</tr>
+		<tr>
+			  <td colspan="2" class="checkbox"><input type="checkbox" id="cbox1" value="checkbox"> Empresa<br><br></td>
+		</tr>
+			<tr>
+			  <td style="width: 50%"  class="texto1"> Usuario: 
+			    <input type="text" id="usuario" value="" class="input_box"></td>
+			  <td style="width: 50%"  class="texto1"> Contraseña: 
+			    <input type="password" id="contraseña" value="" class="input_box"></td>
+			</tr>
+			<tr>
+			  <td class="texto1"> Nombre: <input type="text" id="nombre_cliente" value="" class="input_box"></td>
+			  <td class="texto1"> Dirección:&nbsp;<input type="text" id="direccion" value="" class="input_box"></td>
+			</tr>
+			<tr>
+			  <td class="texto1"> Rut:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+		      <input type="number" id="rut" value="" class="input_box"></td>
+			  <td class="texto1"> Giro:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="giro" value="" class="input_box"></td>
+			</tr>
+			<tr>
+			 <td class="texto1"> Email:      
+			   <input type="text" id="email" value="" class="input_box"></td>
+			  <td class="texto1"> Telefono: <input type="number" id="telefono" value="" class="input_box"></td>
+			</tr>
+			<tr>
+			  <td colspan="2" class="checkbox2"><input type="checkbox" id="cbox2" value="checkbox2"> Acepto condiciones<br><br></td>
+			  </tr>
+			  <tr>
+			  <td colspan="2" align="center"><button class="boton_1" onClick="valCreaUsuario"> Crear Usuario</button>
+			  <br></td>
+			  </tr>
+			  <tr>
+			  <td colspan="2" align="center" height="50px">&nbsp;</td>
+			  </tr>
+		</table>
+      </td>
+    </tr>
+    <tr>
+      <td style="height: 300px;">
+          <table width="100%" border="0" cellpadding="1">
+           <tr>
+			<td style="width: 80%" valign="top" align="center"><img src="image/banner1.jpg"></td>
+           
+          </tr>
+      </table>
+      </td>
+    </tr>
+</table>
+<footer align="center"><img src="image/footer.jpg" width="70%"></footer>
+	</body>
+	
+</html>

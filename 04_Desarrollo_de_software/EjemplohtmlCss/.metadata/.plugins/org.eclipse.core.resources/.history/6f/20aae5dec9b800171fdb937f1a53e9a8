@@ -1,0 +1,41 @@
+ function recuperarmail() {
+   var mail = prompt("Por favor ingrese su e-mail", "Ingresa tu mail");
+	if (mail != null)
+		alert(" Se envio un correo con instrucciones a: " + mail);
+	 else
+		 alert("No ha ingresado un correo");
+    
+}
+
+function valIngreso() {
+  /*if (usuario != null) {
+    // Si no se cumple la condicion...
+    alert('Debe ingresar su nombre');
+    return false;
+  }
+  if (password != null) {
+    // Si no se cumple la condicion...
+    alert('debe ingresar contraseña');
+    return false;
+  }
+  return true;*/
+ 	valor = document.getElementById("usuario").value;
+		if( valor == null || valor.length == 0 || /^\s+$/.test(valor) ) {
+  		return false;
+	}
+}
+
+function valCreaUsuario() {
+  if (usuario == null) {
+    // Si no se cumple la condicion...
+    alert('Debe ingresar su nombre');
+    return false;
+  }
+  if (password == null) {
+    // Si no se cumple la condicion...
+    alert('debe ingresar contraseña');
+    return false;
+  }
+  
+  return true;
+ }

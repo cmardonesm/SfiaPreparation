@@ -13,6 +13,9 @@
 		<item value="org.eclipse.rcp:4.3.2.v20140221-1700"/>
 		<item value="org.radrails.rails:3.6.1.1408558425-7n-7Z7oRIvAHSB7Z"/>
 	</list>
+	<section name="com.aptana.ui.dialogs.ProjectContentsLocationArea">
+		<item value="C:\Users\admin\Desktop\res" key="OUTSIDE_LOCATION"/>
+	</section>
 	<section name="NewWizardAction">
 		<item value="com.aptana.ui.wizards.NewWebProject" key="NewWizardSelectionPage.STORE_SELECTED_ID"/>
 		<list key="NewWizardSelectionPage.STORE_EXPANDED_CATEGORIES_ID">
