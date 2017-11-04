@@ -61,7 +61,7 @@ public class Nota2 extends Alumno2
     }
     
     public String toString() { 
-        String m=super.getNombre()+"|"+super.getRut()+"|"+super.getEdad()+"|"+nota1+"|"+nota2+"|"+nota3+"|"+promedio;
+        String m=super.getNombre()+";"+super.getRut()+";"+super.getEdad()+";"+nota1+";"+nota2+";"+nota3+";"+promedio;
         return m; 
         
     }
