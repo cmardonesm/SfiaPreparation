@@ -55,9 +55,15 @@ public class Nota2 extends Alumno2
             this.nota3=nota3;
         }
         
-    public void calcularPromedio(int nota1, int nota2, int nota3)
+    public void calcularPromedio()
     { 
         this.promedio=(nota1+nota2+nota3)/3;
     }
     
+    public String toString() { 
+        String m=super.getNombre()+"|"+super.getRut()+"|"+super.getEdad()+"|"+nota1+"|"+nota2+"|"+nota3+"|"+promedio;
+        return m; 
+        
     }
+    
+}
