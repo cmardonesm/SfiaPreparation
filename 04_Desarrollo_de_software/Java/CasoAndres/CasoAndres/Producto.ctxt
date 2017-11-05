@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Producto
+comment1.params=
+comment1.target=Producto()
+comment10.params=tipoEnsanblaje
+comment10.target=void\ setTipoEnsamblaje(java.lang.String)
+comment2.params=id\ tipoProducto\ serial\ tipoEnsamblaje
+comment2.target=Producto(java.lang.String,\ java.lang.String,\ java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getId()
+comment4.params=
+comment4.target=java.lang.String\ getTipoProducto()
+comment5.params=
+comment5.target=java.lang.String\ getSerial()
+comment6.params=
+comment6.target=java.lang.String\ getTipoEnsambaje()
+comment7.params=id
+comment7.target=void\ setId(java.lang.String)
+comment8.params=tipoProducto
+comment8.target=void\ setRut(java.lang.String)
+comment9.params=Serial
+comment9.target=void\ setSerial(java.lang.String)
+numComments=11

@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=Serial
+comment1.params=
+comment1.target=Serial()
+comment2.params=codigo\ serie\ proveedor
+comment2.target=Serial(java.lang.String,\ java.lang.String,\ Proveedor)
+comment3.params=
+comment3.target=java.lang.String\ getCodigo()
+comment4.params=
+comment4.target=java.lang.String\ getSerie()
+comment5.params=
+comment5.target=Proveedor\ getProveedor()
+comment6.params=codigo
+comment6.target=void\ setCodigo(java.lang.String)
+comment7.params=serie
+comment7.target=void\ setSerie(java.lang.String)
+comment8.params=proveedor
+comment8.target=void\ setProveedor(Proveedor)
+numComments=9

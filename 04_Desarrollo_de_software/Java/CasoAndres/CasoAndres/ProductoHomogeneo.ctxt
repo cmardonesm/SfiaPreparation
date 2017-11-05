@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=ProductoHomogeneo
+comment1.params=
+comment1.target=ProductoHomogeneo()
+comment2.params=porcentajeDeDescuento\ mesAdquisicion
+comment2.target=ProductoHomogeneo(double,\ java.lang.String)
+comment3.params=
+comment3.target=double\ getPorcentajeDeDescuento()
+comment4.params=
+comment4.target=java.lang.String\ getMesAdquisicion()
+comment5.params=porcentajeDeDescuento
+comment5.target=void\ setPorcentajeDeDescuento(double)
+comment6.params=mesAdquisicion
+comment6.target=void\ setMesAdquisicion(java.lang.String)
+numComments=7

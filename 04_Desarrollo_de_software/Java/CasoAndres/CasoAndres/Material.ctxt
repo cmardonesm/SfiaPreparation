@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Material
+comment1.params=
+comment1.target=Material()
+comment2.params=material\ naturaleza
+comment2.target=Material(java.lang.String,\ java.lang.String)
+comment3.params=
+comment3.target=java.lang.String\ getMaterial()
+comment4.params=
+comment4.target=java.lang.String\ getNaturaleza()
+comment5.params=material
+comment5.target=void\ setMaterial(java.lang.String)
+comment6.params=naturaleza
+comment6.target=void\ setNaturaleza(java.lang.String)
+numComments=7
