@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=DatosAOrdenar
+comment1.params=
+comment1.target=DatosAOrdenar()
+comment10.params=
+comment10.target=void\ ordenarDatosConBoobleSort()
+comment11.params=
+comment11.target=void\ mainPrueba()
+comment2.params=a
+comment2.target=DatosAOrdenar(int)
+comment3.params=
+comment3.target=int\ getA()
+comment4.params=
+comment4.target=int[]\ getx()
+comment5.params=a
+comment5.target=void\ setA(int)
+comment6.params=x
+comment6.target=void\ setX(int[])
+comment7.params=
+comment7.target=void\ grabarDatosEnArreglo()
+comment8.params=
+comment8.target=void\ imprimirCosas()
+comment9.params=
+comment9.target=void\ ordenarDatos()
+numComments=12
