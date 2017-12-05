@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=Boleta
+comment1.params=
+comment1.target=Boleta()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Caja\r\n
+comment2.params=y
+comment2.target=int\ sampleMethod(int)
+numComments=3
